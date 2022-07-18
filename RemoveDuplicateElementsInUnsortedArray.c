@@ -23,10 +23,10 @@ int main() {
 
     /*sizeof to determine its size in bytes 
     and use the division to calculate the number of elements*/
-    //int arr_size = sizeof(arr)/arr[0];
+    int arr_size = sizeof(arr)/ sizeof(arr[0]);
     //printf("Number of elements in the array = %d", arr_size);
 
-    for (i = 1; i < 8; ++i)
+    for (i = 1; i < arr_size; ++i)
     {   
         if(arr[i] != arr[i-1]) {
             arr[j] = arr[i];
