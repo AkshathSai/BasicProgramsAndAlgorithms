@@ -16,39 +16,29 @@
 
 int main() {
 
+    int arr[] = {1, 1, 2, 2, 2, 3, 4, 4};
 
-    int i, j ,k, key, exists;    
+    int i;
+    int j = 1;
 
-    int duplicateElementsArray[] = {1 , 1 , 2, 2, 2, 3 , 4, 4};
+    /*sizeof to determine its size in bytes 
+    and use the division to calculate the number of elements*/
+    //int arr_size = sizeof(arr)/arr[0];
+    //printf("Number of elements in the array = %d", arr_size);
 
-    int noDuplicatesArray[100] = {0};
+    for (i = 1; i < 8; ++i)
+    {   
+        if(arr[i] != arr[i-1]) {
+            arr[j] = arr[i];
+            j += 1;
+        }
+    }
 
-    //Gives the number of elements in the Array
-    int arr_size = sizeof(duplicateElementsArray)/sizeof(int);
-
-    //Logic to remove duplicates
-    for(i = 0, j =0; i<arr_size; i++) 
+    for (i = 0; i < j; ++i)
     {
-
-        key = duplicateElementsArray[i];
-        exists = 0;
-
-        for(k=0; k<i; k++) {
-            if(noDuplicatesArray[k] == key) {
-                exists = 1;
-            }
-        }
-
-        if(!exists) {
-            noDuplicatesArray[j] = duplicateElementsArray[i];
-            j++;
-        }
-
+        printf("arr[%d] = %d \n", i ,arr[i]);
     }
 
-    printf("The elements in an Array");
-    for(i=0; i<arr_size; i++) {
-        printf("arr[%d] = %d \n", i, duplicateElementsArray[i]);
-    }
-
+    return 0;    
+    
 }
