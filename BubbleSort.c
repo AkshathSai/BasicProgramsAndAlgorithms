@@ -52,7 +52,7 @@ int main() {
         
     }
 
-    printf("Array after sorting \n");
+    printf("Array after sorting in Ascending \n");
     printArray(arr, n);
 
 }
