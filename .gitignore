@@ -20,3 +20,8 @@ build/
 # Windows files
 Thumbs.db
 Desktop.ini
+
+#Binary files will be ignored
+*
+!/**/
+!*.*
