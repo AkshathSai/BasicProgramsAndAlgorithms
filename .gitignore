@@ -1,6 +1,22 @@
 #Ignore vscode artifacts
 *.vscode
+
+# Object files
+*.o
+
+# Archive files
+*.a
+
+# Executable files
 *.exe
+*.out
 
 #Ignore build system files
 build/
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+Desktop.ini
