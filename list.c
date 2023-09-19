@@ -1,9 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief 
+ * This Algorithm is used to dynamically
+ * resize an array at runtime
+ * 
+ * @return int
+ */
 int main(void) {
 
     int *list = malloc(3 * sizeof(int));
+
+    if (list == NULL)
+    {
+        return 1;
+    }
 
     list[0] = 1;
     list[1] = 2;
@@ -15,6 +27,10 @@ int main(void) {
     }
 
     int *tmp = realloc(list, 4 * sizeof(int));
+
+    if(tmp == NULL) {
+        return 1;
+    }
 
     list = tmp;
 
