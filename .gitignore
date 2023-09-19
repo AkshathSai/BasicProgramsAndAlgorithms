@@ -1,5 +1,6 @@
 #Ignore vscode artifacts
 *.vscode
+*.exe
 
 #Ignore build system files
 build/
